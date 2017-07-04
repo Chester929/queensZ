@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'cocoon'
 
 
 group :development do

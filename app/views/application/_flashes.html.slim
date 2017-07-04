@@ -1,0 +1,8 @@
+- flash.each do |key, value|
+  - case key
+    - when 'notice'
+      div.alert.alert-info=value
+    - when 'alert'
+      div.alert.alert-warning=value
+    - when 'error'
+      div.alert.alert-danger=value

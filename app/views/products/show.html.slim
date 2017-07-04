@@ -1,0 +1,11 @@
+.page-header
+  h1 =@product.title
+.row
+  .col-md-9
+    h2 Variants:
+    -@product.variants.each do |variant|
+      p>=variant.title
+  .col-md-3
+    .actions>
+      span.action>
+        = link_to 'Delete product', @product, method: :delete, class: 'btn btn-danger'

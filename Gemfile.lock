@@ -63,6 +63,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
+    cocoon (1.2.10)
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.3)
@@ -216,6 +217,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-kaminari-views
   bootstrap-sass
+  cocoon
   dotenv-rails
   flutie
   jbuilder (~> 1.2)

@@ -1,0 +1,5 @@
+.nested-fields
+  = f.input :title
+  .remove-field
+    = link_to_remove_association content_tag(:i,
+            '', class: 'glyphicon glyphicon-minus-sign remove-field') + ' Remove', f

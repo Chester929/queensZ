@@ -1,0 +1,18 @@
+.row
+  = simple_form_for @product do |f|
+    = f.error_notification
+    .form-inputs
+      .col-md-5
+        = f.input :title
+      .col-md-4
+        = f.simple_fields_for :variants do |variant|
+          = render 'variant_fields', f: variant
+        .links.add-field
+          = link_to_add_association content_tag(:i,
+                  '',
+                  class: 'glyphicon glyphicon-plus add-person-field') + ' Add variant',
+                  f, :variants, class: 'btn btn-success'
+      .col-md-3
+        .actions>
+          span.action>
+            = f.submit class: 'btn btn-success'
