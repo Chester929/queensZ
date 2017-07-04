@@ -1,0 +1,6 @@
+.nested-fields
+  = f.input :title
+  = f.input :variant_id, collection: Variant.select(:title, :id), input_html: {class: 'select2'}
+  .remove-field
+    = link_to_remove_association content_tag(:i,
+            '', class: 'glyphicon glyphicon-minus-sign remove-field') + ' Remove', f

@@ -1,0 +1,19 @@
+nav.navbar.navbar-default.navbar-static-top role="navigation"
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle data-target="#collapse-nav" data-toggle="collapse" type="button"
+        span.sr-only Menu
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      .navbar-brand=link_to 'Store', root_path
+    #collapse-nav.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.dropdown
+          = link_to root_path do
+            i.glyphicon.glyphicon-th-large
+            span<> Products
+        li.dropdown
+          =link_to documents_path do
+            i.glyphicon.glyphicon-list-alt
+            span<> Documents

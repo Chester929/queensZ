@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= page_title(app_name: (Rails.env.development? ? '[DEV] ' : '') + 'Store')
+    meta charset="utf-8"
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=latin-ext'
+    = stylesheet_link_tag :application, media: 'all'
+    = csrf_meta_tags
+
+  body class=body_class
+    = render 'application/nav'
+    .container-fluid
+      = render 'application/flashes'
+      div.doc
+        = yield
+
+    = javascript_include_tag :application
+    = yield :javascript
