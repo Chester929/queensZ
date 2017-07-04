@@ -1,0 +1,16 @@
+.page-header
+  h1 =@document.title
+.row
+  .col-md-9
+    h2 Items:
+    -@document.items.each do |item|
+      span>
+        .row
+          .col-md-1
+            =item.title
+          .col-md-1
+            =link_to item.variant.title, item.variant.product
+  .col-md-3
+    .actions>
+      span.action>
+        = link_to 'Delete document', @document, method: :delete, class: 'btn btn-danger'

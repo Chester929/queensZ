@@ -1,17 +1,17 @@
 .row
-  = simple_form_for @product do |f|
+  = simple_form_for @document do |f|
     = f.error_notification
     .form-inputs
       .col-md-5
         = f.input :title
       .col-md-4
-        = f.simple_fields_for :variants do |variant|
-          = render 'variant_fields', f: variant
+        = f.simple_fields_for :items do |item|
+          = render 'item_fields', f: item
         .links.add-field
           = link_to_add_association content_tag(:i,
                   '',
-                  class: 'glyphicon glyphicon-plus add-field') + ' Add variant',
-                  f, :variants, class: 'btn btn-success'
+                  class: 'glyphicon glyphicon-plus add-field add-item') + ' Add item',
+                  f, :items, class: 'btn btn-success'
       .col-md-3
         .actions>
           span.action>
